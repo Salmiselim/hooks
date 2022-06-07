@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import Home from './Home';
+import { useDispatch } from "react-redux";  
 import { useParams, useNavigate } from "react-router-dom"
 const Add = ({ addFilm }) => {
+    const dispatch=useDispatch();
     const [movie, setMovie] = useState({ Title: '', Poster: "" })
     const handleChange = (e) => {
         setMovie({ ...movie, [e.target.name]: e.target.value })
@@ -20,10 +22,7 @@ const Add = ({ addFilm }) => {
 
           
     }
-    const back=()=>{
-
-        navigate("/")
-    }
+   
  
     return (
         <Form onSubmit={handleSubmit}>
@@ -41,7 +40,7 @@ const Add = ({ addFilm }) => {
                 Submit
             </Button>
             
-    <Button onClick={back}>Back Home</Button>
+   
         </Form>)
 }
 export default Add;

@@ -1,7 +1,8 @@
 import React from 'react'
-import { Card, Button } from 'react-bootstrap';
+import { Container,Nav, Navbar} from 'react-bootstrap';
 import { useParams, useNavigate } from "react-router-dom"
 import Add from './Add';
+
 function Home() {
     const navigate = useNavigate()
     const { id } = useParams()
@@ -12,12 +13,10 @@ function Home() {
         navigate('/Add')
     }
     return (
-        <Card>
-            <div>Home</div>
-
-            <Button onClick={list}>Go to Movies List</Button>
-            <Button onClick={Add}>Add</Button>
-        </Card>
+        
+<div>
+    <h1>welcome to my home page</h1>
+</div>
     )
 }
 

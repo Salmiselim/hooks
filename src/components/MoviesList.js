@@ -5,6 +5,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap';
 import { useParams, useNavigate } from "react-router-dom"
 const MoviesList = (props) => {
     const navigate = useNavigate()
+    
     const back = () => {
         navigate('/')
     }
@@ -16,7 +17,10 @@ const MoviesList = (props) => {
         <>
             <h1>List:</h1>
             {props.movies.map((movie, index) => (<SingleMovie key={index} movie={movie} />)
+
+        
             )}
+            
         </>
     )
 }
